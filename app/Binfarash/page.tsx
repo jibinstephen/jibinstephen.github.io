@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function BinPage() {
   return (
-    <main className="w-full pl-48 pr-48">
+    <main className="w-full lg:pl-48 lg:pr-48">
 
       <div>
         <Link href="/" className=" font-bold"> Back</Link>
