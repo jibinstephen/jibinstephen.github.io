@@ -3,12 +3,22 @@ import Link from "next/link";
 
 export default function BinPage() {
   return (
-    <main className="w-full lg:pl-48 lg:pr-48">
-
-      <div>
-        <Link href="/" className=" font-bold"> Back</Link>
+    <>
+    <div className="sticky top-0 z-50 bg-white/80 backdrop-blur ">
+        <div className="max-w-screen-xl mx-auto px-4 py-3">
+          <Link
+            href="/"
+            aria-label="Go back"
+            className="inline-flex items-center gap-2 text-black font-medium hover:opacity-70"
+          >
+            {/* Back Icon */}
+            <span className="text-xl">←</span>
+            <span className="hidden sm:inline">Back</span>
+          </Link>
+        </div>
       </div>
 
+    <main className="w-full lg:pl-48 lg:pr-48 ">
       <Image
         src="/bin/1.png"
         alt="Anandavandi cultural visual"
@@ -155,5 +165,6 @@ export default function BinPage() {
       />
 
     </main>
+    </>
   );
 }

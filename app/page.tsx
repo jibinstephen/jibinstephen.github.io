@@ -19,7 +19,7 @@ export default function Home() {
       {/* Second Image */}
       <section>
         <Image
-          src="/IMG_5766.PNG"
+          src="/IMG_6104.JPG"
           alt="Anandavandi visual"
           width={1920}
           height={1080}
@@ -66,7 +66,10 @@ export default function Home() {
       {/* Hover Zoom Images */}
       <section className="flex w-full gap-4">
         <div className="flex-1 overflow-hidden rounded-xl">
-        <Link href="/Anandavandi">
+        <Link
+         href="/Anandavandi"
+         scroll
+         >
           <Image
             src="/AANANDAVANDI03.jpg"
             alt="Anandavandi cultural visual"
@@ -83,7 +86,10 @@ export default function Home() {
         </div>
 
         <div className="flex-1 overflow-hidden rounded-xl">
-        <Link href="/Binfarash">
+        <Link
+         href="/Binfarash"
+         scroll
+        >
           <Image
             src="/AANANDAVANDI04.png"
             alt="Anandavandi educational visual"
@@ -99,9 +105,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      <footer className="p-10 text-center text-gray-400 text-sm">
-        © 2026 Jibin Stephen • Portfolio
-      </footer>
+
     </main>
   );
 }
