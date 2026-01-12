@@ -5,26 +5,11 @@ import { Behance, InstagramIcon, LinkedInIcon } from '../Hook/Svgicons'
 
 
 export const Navbar = () => {
-
   const [navbar, setNavbar] = useState(false)
-
-
-
-
   return (
-    <header className='flex items-center justify-between bg-dark py-6 px-8 sticky top-0 relative z-10'>
-            {/* <Logo/> */}
-            <nav className='hidden md:flex gap-8 pl-14'>
+    <header className='flex items-center justify-end bg-dark py-6 px-8 sticky top-0 relative z-10'>
 
-            </nav>
 
-            <div className="md:hidden">
-              <button
-                className="p-2 text-white rounded-md outline-none focus:border-gray-400 focus:border m-2"
-                onClick={() => setNavbar(!navbar)}
-              >
-              </button>
-            </div>
 
             <nav className=' flex gap-4 item-top justify-center'>
             {/* <a href="https://drive.google.com/uc?export=download&id=1RpHZgTgGbC4Y5xsCedBbqq_YIL-hFUYh">
@@ -34,12 +19,9 @@ export const Navbar = () => {
                    </button>
                </a> */}
 
-               <a href='https://www.instagram.com/_chilla_art/'   target={'_blank' }><InstagramIcon className={"text-white w-1rem w-1rem"}/></a>
-              <a href='https://www.linkedin.com/in/jibin-stephen-2739071b7'   target={'_blank' }><LinkedInIcon className={"text-white w-1rem w-1rem"}/></a>
-
+             <a href='https://www.instagram.com/_chilla_art/'   target={'_blank' }><InstagramIcon className={"text-white w-1rem w-1rem"}/></a>
+             <a href='https://www.linkedin.com/in/jibin-stephen-2739071b7'   target={'_blank' }><LinkedInIcon className={"text-white w-1rem w-1rem"}/></a>
              <a href='https://www.behance.net/jibinstephen'  target={'_blank' }> <Behance className={"text-white"}/></a>
-
-
             </nav>
 
             <div className='absolute top-20 left-0 bg-dark w-full md:hidden px-4 '>
@@ -52,12 +34,6 @@ export const Navbar = () => {
             <div className="items-center justify-center space-y-8  md:flex md:space-x-6 md:space-y-0"
              onClick={() => setNavbar(!navbar)}
             >
-
-
-
-
-
-
             </div>
 
           </div>
