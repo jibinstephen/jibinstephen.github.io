@@ -1,8 +1,17 @@
+
 import Image from "next/image";
 import Link from "next/link";
+import {Navbar} from './Component/Navbar'
 
 export default function Home() {
   return (
+    <>
+     <div className="sticky top-0 z-50 bg-white/80 backdrop-blur ">
+        <div className=" ">
+         <Navbar />
+
+        </div>
+      </div>
     <main className="w-full">
       {/* Hero Image */}
       <section>
@@ -107,5 +116,7 @@ export default function Home() {
       </section>
 
     </main>
+    </>
+
   );
 }
