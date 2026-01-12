@@ -1,43 +1,14 @@
 'use client'
-import Image from 'next/image'
-import Link from 'next/link'
-import React, { useState } from 'react'
+
+import { useState } from 'react'
 import { Behance, InstagramIcon, LinkedInIcon } from '../Hook/Svgicons'
 
 
-
-
-const NAV_ITEMS= [
-    {
-      label: "Home",
-      page: "home",
-    },
-    {
-      label: "About",
-      page: "about",
-    },
-
-    {
-      label: "Skills",
-      page: "skills",
-    },
-    {
-      label: "Projects",
-      page: "projects",
-    },
-    {
-      label: "Contact",
-      page: "contact",
-    },
-]
 export const Navbar = () => {
 
   const [navbar, setNavbar] = useState(false)
 
-  const openInNewTab = (url) => {
-    const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-    if (newWindow) newWindow.opener = null
-}
+
 
 
   return (
@@ -55,7 +26,7 @@ export const Navbar = () => {
               </button>
             </div>
 
-            <nav className='hidden md:flex gap-4 item-top justify-center'>
+            <nav className=' flex gap-4 item-top justify-center'>
             {/* <a href="https://drive.google.com/uc?export=download&id=1RpHZgTgGbC4Y5xsCedBbqq_YIL-hFUYh">
                <button  onClick={() => openInNewTab("https://drive.google.com/file/d/1RpHZgTgGbC4Y5xsCedBbqq_YIL-hFUYh/view?usp=sharing")} className=" bg-blue-600 rounded-sm py-1 rounded-full-50% hover:bg-purple-700 hover:text-white transition duration-200
                                                           font-playfair px-2 bg-red">
@@ -84,24 +55,7 @@ export const Navbar = () => {
 
 
 
-             <nav className='flex md:hidden gap-4 item-top justify-center'>
 
-            {/* <a href="https://drive.google.com/uc?export=download&id=1RpHZgTgGbC4Y5xsCedBbqq_YIL-hFUYh">
-               <button onClick={() => openInNewTab("https://drive.google.com/file/d/1RpHZgTgGbC4Y5xsCedBbqq_YIL-hFUYh/view?usp=sharing")} className=" bg-blue-600 rounded-sm py-1 rounded-full-50% hover:bg-purple-700 hover:text-white transition duration-200
-                                                          font-playfair px-2 bg-red">
-                <h4> Resume </h4>
-                   </button>
-               </a> */}
-
-               <a href='https://www.instagram.com/_chilla_art/' whileHover={{y:-2}}  target={'_blank' }><InstagramIcon className={"text-white w-1rem w-1rem"}/></a>
-
-
-              <a href='https://www.linkedin.com/in/jibin-stephen-2739071b7' whileHover={{y:-2}}  target={'_blank' }><LinkedInIcon className={"text-white w-1rem w-1rem"}/></a>
-
-             <a href='https://www.behance.net/jibinstephen' whileHover={{y:-2}} target={'_blank' }> <Behance className={"text-white"}/></a>
-
-
-            </nav>
 
 
             </div>
