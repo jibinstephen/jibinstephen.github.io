@@ -34,10 +34,10 @@ export const Navbar = () => {
                    </button>
                </a> */}
 
-               <a href='https://www.instagram.com/_chilla_art/' whileHover={{y:-2}}  target={'_blank' }><InstagramIcon className={"text-white w-1rem w-1rem"}/></a>
-              <a href='https://www.linkedin.com/in/jibin-stephen-2739071b7' whileHover={{y:-2}}  target={'_blank' }><LinkedInIcon className={"text-white w-1rem w-1rem"}/></a>
+               <a href='https://www.instagram.com/_chilla_art/'   target={'_blank' }><InstagramIcon className={"text-white w-1rem w-1rem"}/></a>
+              <a href='https://www.linkedin.com/in/jibin-stephen-2739071b7'   target={'_blank' }><LinkedInIcon className={"text-white w-1rem w-1rem"}/></a>
 
-             <a href='https://www.behance.net/jibinstephen' whileHover={{y:-2}} target={'_blank' }> <Behance className={"text-white"}/></a>
+             <a href='https://www.behance.net/jibinstephen'  target={'_blank' }> <Behance className={"text-white"}/></a>
 
 
             </nav>

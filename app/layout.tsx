@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ScrollToTop from "./ScrollToTop";
+import ZoomLensProvider from "./ZoomLensProvider";
 
 
 const geistSans = Geist({
@@ -30,7 +31,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
           <ScrollToTop />
-        {children}
+          <ZoomLensProvider>
+           {children}
+          </ZoomLensProvider>
+
         <footer className="p-6 text-center text-black bg-gray-200 text-sm">
         © 2026 Jibin Stephen • Portfolio
       </footer>
