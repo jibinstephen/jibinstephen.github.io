@@ -54,7 +54,7 @@ export default function Home() {
         </section>
 
         {/* Video Section */}
-        <section aria-label="Video showcase">
+        <section aria-label="Video showcase m-0 p-0">
           <video
             autoPlay
             loop
@@ -79,10 +79,10 @@ export default function Home() {
         </section>
 
         {/* Featured Projects */}
-        <section className="flex  flex-col lg:flex-row  w-full gap-24 ">
+        <section className="flex  flex-col lg:flex-row  w-full gap-4 ">
           <FeaturedProject
             title="Anandavandi"
-            category="Cultural Branding"
+            category="Campaign For Calicut Corporation"
             imageSrc="/AANANDAVANDI03.jpg"
             imageAlt="Anandavandi cultural visual"
             href="/Anandavandi"
@@ -90,7 +90,7 @@ export default function Home() {
 
           <FeaturedProject
             title="Binfarash"
-            category="Education Platform"
+            category="Package Designing"
             imageSrc="/AANANDAVANDI04.png"
             imageAlt="Anandavandi educational visual"
             href="/Binfarash"
