@@ -23,7 +23,7 @@ const GraphicDesignSection = ({
     window.matchMedia("(hover: hover)").matches;
 
   return (
-    <section className={`w-full py-24 px-4 sm:px-8 lg:px-10  bg-white/60 lg:${bg} `}>
+    <section className={`w-full py-24 px-4 sm:px-8 lg:px-10  bg-white/80 lg:${bg} `}>
       <div className="max-w-7xl mx-auto text-center">
 
         <Link
