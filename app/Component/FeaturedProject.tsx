@@ -24,7 +24,7 @@ const FeaturedProject = ({
 }: FeaturedProjectProps) => {
     return (
         <Link href={href} scroll className="group block w-full">
-            <div className="relative   aspect-[4/3] md:aspect-[16/9] overflow-hidden">
+            <div className="relative   aspect-[4/3] md:aspect-[16/9]  ">
                 <div className="absolute inset-0 bg-black/5 opacity-0 lg:group-hover:opacity-10 transition-opacity duration-500 z-10" />
                 <Image
                     src={imageSrc}
@@ -34,7 +34,7 @@ const FeaturedProject = ({
                 />
 
                 {/* Mobile: Always visible content overlay */}
-                <div className="absolute inset-0 flex flex-col justify-end md:hidden text-center pb-1 pt-20 translate-y-3">
+                <div className="absolute inset-0 flex flex-col justify-end md:hidden text-center pb-1 pt-20 translate-y-6">
                     <span className="text-black text-sm font-medium tracking-widest uppercase mb-1 block">
                         {category}
                     </span>
@@ -45,7 +45,7 @@ const FeaturedProject = ({
             </div>
 
             {/* Desktop: Content below image */}
-            <div className="hidden md:flex flex-col mt-6 space-y-1">
+            <div className="hidden md:flex flex-col mt-6 space-y-1 px-4">
                 <div className="flex justify-between items-baseline border-b border-gray-100 pb-4 group-hover:border-gray-300 transition-colors duration-500">
                     <h3 className="text-3xl font-light text-gray-900 group-hover:text-gray-600 transition-colors duration-300">{title}</h3>
                     <span className="text-sm font-medium text-gray-400 tracking-widest uppercase group-hover:text-gray-900 transition-colors duration-300">{category}</span>
