@@ -17,6 +17,11 @@ const GraphicDesignSection = ({
   href: string;
   setBg: React.Dispatch<React.SetStateAction<string>>;
 }) => {
+
+  const canHover =
+    typeof window !== "undefined" &&
+    window.matchMedia("(hover: hover)").matches;
+
   return (
     <section className={`w-full py-24 px-4 sm:px-8 lg:px-10 ${bg}`}>
       <div className="max-w-7xl mx-auto text-center">
@@ -24,8 +29,12 @@ const GraphicDesignSection = ({
         <Link
           href={href}
           className="relative inline-flex items-center gap-4 md:gap-6 group"
-          onMouseEnter={() => setBg(hoverBg)}
-          onMouseLeave={() => setBg('bg-transparent')}
+          onMouseEnter={() => {
+            if (canHover) setBg(hoverBg);
+          }}
+          onMouseLeave={() => {
+            if (canHover) setBg("bg-transparent");
+          }}
         >
           {/* Title */}
           <h2 className="text-3xl md:text-5xl font-light tracking-tight text-gray-900 border-b pb-3 md:pb-4 border-gray-100">
