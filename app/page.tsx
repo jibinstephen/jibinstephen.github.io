@@ -79,7 +79,7 @@ export default function Home() {
         </section>
 
         {/* Featured Projects */}
-        <section className="flex flex-row w-full gap-24 ">
+        <section className="flex  flex-col lg:flex-row  w-full gap-24 ">
           <FeaturedProject
             title="Anandavandi"
             category="Cultural Branding"
