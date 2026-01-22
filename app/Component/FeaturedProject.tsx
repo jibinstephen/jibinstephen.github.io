@@ -34,15 +34,15 @@ const FeaturedProject = ({
                 />
 
                 {/* Mobile: Always visible content overlay */}
-                <div className="absolute inset-0  bottom-6 flex flex-col justify-end md:hidden bg-gradient-to-t from-black/60 to-transparent text-center">
+                {/* <div className="absolute inset-0  bottom-6 flex flex-col justify-end md:hidden bg-gradient-to-t from-black/60 to-transparent text-center">
                     <span className="text-white/80 text-sm font-medium tracking-widest uppercase mb-1">{category}</span>
                     <h3 className="text-white text-2xl font-light">{title}</h3>
-                </div>
+                </div> */}
             </div>
 
             {/* Desktop: Content below image */}
-            <div className="hidden md:flex flex-col mt-6 space-y-1">
-                <div className="flex justify-between items-baseline border-b border-gray-100 pb-4 group-hover:border-gray-300 transition-colors duration-500">
+            <div className="flex flex-col mt-6 space-y-1">
+                <div className="flex justify-between items-baseline border-b border-gray-100 pb-4 group-hover:border-gray-300 transition-colors duration-500 px-4">
                     <h3 className="text-3xl font-light text-gray-900 group-hover:text-gray-600 transition-colors duration-300">{title}</h3>
                     <span className="text-sm font-medium text-gray-400 tracking-widest uppercase group-hover:text-gray-900 transition-colors duration-300">{category}</span>
                 </div>
