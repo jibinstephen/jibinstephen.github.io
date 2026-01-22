@@ -79,7 +79,7 @@ export default function Home() {
         </section>
 
         {/* Featured Projects */}
-        <section className="flex  flex-col lg:flex-row  w-full gap-4 ">
+        <section className="flex  flex-col lg:flex-row  w-full gap-4  bg-white">
           <FeaturedProject
             title="Anandavandi"
             category="Campaign For Calicut Corporation"
