@@ -23,7 +23,7 @@ const GraphicDesignSection = ({
     window.matchMedia("(hover: hover)").matches;
 
   return (
-    <section className={`w-full py-24 px-4 sm:px-8 lg:px-10 ${bg}`}>
+    <section className={`w-full py-24 px-4 sm:px-8 lg:px-10  bg-white/80 lg:${bg} `}>
       <div className="max-w-7xl mx-auto text-center">
 
         <Link
@@ -37,7 +37,8 @@ const GraphicDesignSection = ({
           }}
         >
           {/* Title */}
-          <h2 className="text-3xl md:text-5xl font-light tracking-tight text-gray-900 border-b pb-3 md:pb-4 border-gray-100">
+          <h2
+          className="text-3xl md:text-5xl font-light tracking-tight text-gray-900 border-b pb-3 md:pb-4 border-gray-100">
             {title}
           </h2>
 
