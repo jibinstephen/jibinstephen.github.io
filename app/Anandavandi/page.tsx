@@ -11,7 +11,18 @@ export default function AnandavandiPage() {
             className="inline-flex items-center gap-2 text-black font-medium hover:opacity-70"
           >
             {/* Back Icon */}
-            <span className="text-xl">←</span>
+            <span className="text-xl">
+            <svg
+                viewBox="0 0 24 24"
+                className="h-[2.8rem] md:h-[3.5rem]"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1"
+                >
+              <circle cx="12" cy="12" r="10" />
+              <path d="M14 8l-4 4 4 4" />
+            </svg>
+            </span>
             <span className="hidden sm:inline">Back</span>
           </Link>
         </div>

@@ -1,121 +1,118 @@
-
+'use client'
 import Image from "next/image";
 import Link from "next/link";
-import {Navbar} from './Component/Navbar'
+import { Navbar } from './Component/Navbar'
+import Contact from './Component/Contact'
+import IllustrationSection from './Component/IllustrationSection'
+import GraphicDesignSection from './Component/GraphicDesignSection'
+import FeaturedProject from './Component/FeaturedProject'
+import { useState } from "react";
 
 export default function Home() {
+  const [bg,setBg]= useState('bg-red')
   return (
     <>
      <div className="sticky top-0 z-50 bg-white/80 backdrop-blur ">
         <div className=" ">
-         <Navbar />
+          <Navbar />
 
         </div>
       </div>
-    <main className="w-full">
-      {/* Hero Image */}
-      <section>
-        <Image
-          src="/IMG_5753.PNG"
-          alt="Anandavandi main banner"
-          width={1920}
-          height={1080}
-          priority
-          className="w-full relative"
-        />
-      </section>
-
-      {/* Second Image */}
-      <section>
-        <Image
-          src="/IMG_6104.JPG"
-          alt="Anandavandi visual"
-          width={1920}
-          height={1080}
-          className="w-full relative -top-3"
-        />
-      </section>
-
-      {/* Education Image */}
-      <section>
-        <Image
-          src="/education.jpg"
-          alt="Education showcase"
-          width={1920}
-          height={1080}
-          className="w-full relative -top-3"
-        />
-      </section>
-
-      {/* Video Section */}
-      <section aria-label="Video showcase">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          className="w-full h-auto"
-        >
-          <source src="/17.32.47.mp4" type="video/mp4" />
-        </video>
-      </section>
-
-      {/* Image Below Video */}
-      <section>
-        <Image
-          src="/IMG_5873.PNG"
-          alt="Anandavandi featured visual"
-          width={1920}
-          height={1080}
-          className="w-full relative"
-        />
-      </section>
-
-      {/* Hover Zoom Images */}
-      <section className="flex w-full gap-4">
-        <div className="flex-1 overflow-hidden rounded-xl">
-        <Link
-         href="/Anandavandi"
-         scroll
-         >
+      <main className="w-full">
+        {/* Hero Image */}
+        <section>
           <Image
-            src="/AANANDAVANDI03.jpg"
-            alt="Anandavandi cultural visual"
-            width={800}
-            height={600}
-            className="
-              w-full h-full
-              cursor-pointer
-              transition-transform duration-300
-              hover:scale-110
-            "
+            src="/IMG_5753.PNG"
+            alt="Anandavandi main banner"
+            width={1920}
+            height={1080}
+            priority
+            className="w-full relative"
           />
-          </Link>
-        </div>
+        </section>
 
-        <div className="flex-1 overflow-hidden rounded-xl">
-        <Link
-         href="/Binfarash"
-         scroll
-        >
+        {/* Second Image */}
+        <section>
           <Image
-            src="/AANANDAVANDI04.png"
-            alt="Anandavandi educational visual"
-            width={800}
-            height={600}
-            className="
-              w-full h-full
-              cursor-pointer
-              transition-transform duration-300
-              hover:scale-110
-            "
+            src="/IMG_6104.JPG"
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-full relative -top-3"
           />
-          </Link>
-        </div>
-      </section>
+        </section>
 
-    </main>
+        {/* Education Image */}
+        <section>
+          <Image
+            src="/education.jpg"
+            alt="Education showcase"
+            width={1920}
+            height={1080}
+            className="w-full relative -top-3 "
+          />
+        </section>
+
+        {/* Video Section */}
+        <section aria-label="Video showcase">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            className="w-full h-auto"
+          >
+            <source src="/17.32.47.mp4" type="video/mp4" />
+          </video>
+        </section>
+
+        {/* Image Below Video */}
+        <section>
+          <Image
+            src="/IMG_6216.JPG"
+            alt="Anandavandi featured visual"
+            width={1920}
+            height={1080}
+            className="w-full relative"
+          />
+        </section>
+
+        {/* Featured Projects */}
+        <section className="flex flex-row w-full gap-24 ">
+          <FeaturedProject
+            title="Anandavandi"
+            category="Cultural Branding"
+            imageSrc="/AANANDAVANDI03.jpg"
+            imageAlt="Anandavandi cultural visual"
+            href="/Anandavandi"
+          />
+
+          <FeaturedProject
+            title="Binfarash"
+            category="Education Platform"
+            imageSrc="/AANANDAVANDI04.png"
+            imageAlt="Anandavandi educational visual"
+            href="/Binfarash"
+          />
+        </section>
+
+
+
+        {/* <IllustrationSection /> */}
+        <GraphicDesignSection
+          title="VISUAL ILLUSTRATION"
+          subTitle=""
+          hoverBg="bg-blue-600 "
+          setBg={setBg}
+          bg={bg}
+          href="visual-Illustration"
+        />
+
+
+        <Contact />
+
+      </main >
     </>
 
   );
