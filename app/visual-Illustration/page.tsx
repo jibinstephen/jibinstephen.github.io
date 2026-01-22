@@ -30,7 +30,7 @@ export default function BinPage() {
 
     <main className="w-full lg:pl-48 lg:pr-48 ">
       <Image
-        src="/art-01.png"
+        src="/conne2-01.png"
         alt="Anandavandi cultural visual"
         width={1200}
         height={800}
