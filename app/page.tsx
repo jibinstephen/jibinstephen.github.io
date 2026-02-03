@@ -58,9 +58,18 @@ export default function Home() {
         </section>
 
         {/* Hero Image */}
-        {/* <section>
+        <section>
           <Image
-            src="/first2.gif"
+            src="/updatedone-02.png"
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+         <section>
+          <Image
+            src="/ANADHAVANDIFIRST.gif"
             alt="Anandavandi main banner"
             width={1920}
             height={1080}
@@ -69,27 +78,41 @@ export default function Home() {
           />
         </section>
 
-        {/* Second Image
+
+
+
         <section>
           <Image
-            src="/secondforafter.gif"
+            src="/anandavandilast-01.png"
             alt="Anandavandi visual"
             width={1920}
             height={1080}
             className="w-fit"
           />
-        </section>*/}
+        </section>
 
-        {/* Education Image
+        {/* Education Image*/}
+
+
+        <div className="w-full aspect-video">
+      <iframe
+        className="w-full h-full"
+         src="https://www.youtube.com/embed/cDEpBoEdX7E"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
         <section>
           <Image
-            src="/3rdpage2.gif"
+            src="/222-01.png"
             alt="Education showcase"
             width={1920}
             height={1080}
             className="w-full relative top-3 "
           />
-        </section>*/}
+        </section>
 
         {/* Video Section */}
         {/* <section aria-label="Video showcase m-0 p-0">
