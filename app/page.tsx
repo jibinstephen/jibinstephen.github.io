@@ -26,7 +26,7 @@ export default function Home() {
            muted
            playsInline
            preload="metadata"
-           className="block w-full h-auto"
+           className="block w-full h-auto  scale-[1.01]"
           >
             <source src="/first2.mp4" type="video/mp4" />
           </video>
@@ -38,7 +38,7 @@ export default function Home() {
            muted
            playsInline
            preload="metadata"
-           className="block w-full h-auto"
+           className="block w-full h-auto  scale-[1.01]"
           >
             <source src="/secondforafter.mp4" type="video/mp4" />
           </video>
@@ -50,7 +50,7 @@ export default function Home() {
             muted
             playsInline
             preload="metadata"
-            className="block w-full h-auto"
+            className="block w-full h-auto  scale-[1.01]"
           >
             <source src="/3rdpage2_3.mp4" type="video/mp4" />
           </video>
