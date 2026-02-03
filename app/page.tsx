@@ -19,29 +19,30 @@ export default function Home() {
         </div>
       </div>
       <main className="w-full bg-white">
-        <section aria-label="Video showcase m-0 p-0 bg-transparent ">
-          <video
-           autoPlay
-           loop
-           muted
-           playsInline
-           preload="metadata"
-           className="block w-full h-auto  scale-[1.01]"
-          >
-            <source src="/first2.mp4" type="video/mp4" />
-          </video>
-        </section>
-        <section aria-label="Video m-0 p-0 bg-transparent">
-          <video
-           autoPlay
-           loop
-           muted
-           playsInline
-           preload="metadata"
-           className="block w-full h-auto  scale-[1.01]"
-          >
-            <source src="/secondforafter.mp4" type="video/mp4" />
-          </video>
+  <section className="m-0 p-0 overflow-hidden">
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="metadata"
+      className="block w-full h-auto scale-[1.01]"
+    >
+      <source src="/333333.mp4" type="video/mp4" />
+    </video>
+  </section>
+
+  <section className="m-0 p-0 overflow-hidden -mt-px">
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="metadata"
+      className="block w-full h-auto scale-[1.01]"
+    >
+      <source src="/secondforafter.mp4" type="video/mp4" />
+    </video>
         </section>
         <section aria-label="Video m-0 p-0 bg-transparent">
           <video
