@@ -115,18 +115,42 @@ export default function Home() {
         </section>
 
         {/* Video Section */}
-        {/* <section aria-label="Video showcase m-0 p-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            className="w-full h-auto"
-          >
-            <source src="/17.32.47.mp4" type="video/mp4" />
-          </video>
-        </section> */}
+        <section >
+        <Image
+            src="/Untitled-2-02.png"
+            alt="Education showcase"
+            width={1920}
+            height={1080}
+            className="w-full relative top-3 "
+          />
+        </section>
+        <section >
+        <Image
+            src="/1STPAGE-01.png"
+            alt="Education showcase"
+            width={1920}
+            height={1080}
+            className="w-full relative top-3 "
+          />
+        </section>
+        <section >
+        <Image
+            src="/Image(1).png"
+            alt="Education showcase"
+            width={1920}
+            height={1080}
+            className="w-full relative top-3 "
+          />
+        </section>
+        <section >
+        <Image
+            src="/3RDPAGE-01.png"
+            alt="Education showcase"
+            width={1920}
+            height={1080}
+            className="w-full relative top-3 "
+          />
+        </section>
 
         {/* Image Below Video */}
         {/* <section>
