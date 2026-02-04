@@ -133,15 +133,18 @@ export default function Home() {
             className="w-full relative top-3 "
           />
         </section>
-        <section >
-        <Image
-            src="/Image(1).png"
-            alt="Education showcase"
-            width={1920}
-            height={1080}
-            className="w-full relative top-3 "
-          />
-        </section>
+        <section className="m-0 p-0 overflow-hidden">
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="metadata"
+      className="block w-full h-auto scale-[1.01]"
+    >
+      <source src="/6385IMG.MP4" type="video/mp4" />
+    </video>
+  </section>
         <section >
         <Image
             src="/3RDPAGE-01.png"
