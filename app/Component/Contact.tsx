@@ -55,7 +55,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/jibin-stephen-2739071b7"
+              href="https://www.linkedin.com/in/jibin-stephen"
               target="_blank"
               className="p-3 rounded-full bg-gray-50 hover:bg-gray-100 text-gray-600 hover:text-gray-900 transition-all duration-300 hover:scale-110"
               aria-label="LinkedIn"
