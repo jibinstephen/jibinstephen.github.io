@@ -124,7 +124,10 @@ export default function Home() {
             className="w-full relative top-3 "
           />
         </section>
-        <section >
+        <section className=" relative">
+           <div className="  absolute top-0 right-0 z-10 h-auto w-auto p-4 m-4 mt-6 rounded-xl bg-gray-400">
+             <span className=" text-5xl font-serif"> No: 1</span>
+           </div>
         <Image
             src="/1STPAGE-01.png"
             alt="Education showcase"
@@ -156,7 +159,10 @@ export default function Home() {
         </section>
 
         {/* Image Below Video */}
-        <section>
+        <section className=" relative">
+           <div className="  absolute top-0 right-0 z-10 h-auto w-auto p-4 m-4 rounded-xl bg-gray-200">
+             <span className=" text-5xl font-serif"> No: 2</span>
+           </div>
           <Image
             src="/FINAL-01.png"
             alt="Anandavandi featured visual"
