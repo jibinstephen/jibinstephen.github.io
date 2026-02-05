@@ -129,7 +129,7 @@ export default function Home() {
              <span className="text-sm md:text-2xl lg:text-5xl  font-serif"> No: 1</span>
            </div>
         <Image
-            src="/1STPAGE-01.png"
+            src="/Recovered01.png"
             alt="Education showcase"
             width={1920}
             height={1080}
@@ -164,7 +164,7 @@ export default function Home() {
              <span className="text-sm md:text-2xl lg:text-5xl  font-serif"> No: 2</span>
            </div>
           <Image
-            src="/FINAL-01.png"
+            src="/PG-01.png"
             alt="Anandavandi featured visual"
             width={1920}
             height={1080}
