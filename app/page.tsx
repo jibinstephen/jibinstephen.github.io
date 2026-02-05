@@ -156,15 +156,15 @@ export default function Home() {
         </section>
 
         {/* Image Below Video */}
-        {/* <section>
+        <section>
           <Image
-            src="/IMG_6216.JPG"
+            src="/FINAL-01.png"
             alt="Anandavandi featured visual"
             width={1920}
             height={1080}
             className="w-full relative"
           />
-        </section> */}
+        </section>
 
         {/* Featured Projects */}
         {/* <section className="flex  flex-col lg:flex-row  w-full gap-4  bg-white/80">
