@@ -125,8 +125,8 @@ export default function Home() {
           />
         </section>
         <section className=" relative">
-           <div className="  absolute top-0 right-0 z-10 h-auto w-auto p-4 m-4 mt-6 rounded-xl bg-gray-400">
-             <span className=" text-5xl font-serif"> No: 1</span>
+        <div className="  absolute top-0 right-0 z-10 h-auto w-auto p-2 lg:p-4 m-2 lg:m-4 rounded-xl bg-gray-200">
+             <span className="text-sm md:text-2xl lg:text-5xl  font-serif"> No: 1</span>
            </div>
         <Image
             src="/1STPAGE-01.png"
@@ -160,8 +160,8 @@ export default function Home() {
 
         {/* Image Below Video */}
         <section className=" relative">
-           <div className="  absolute top-0 right-0 z-10 h-auto w-auto p-4 m-4 rounded-xl bg-gray-200">
-             <span className=" text-5xl font-serif"> No: 2</span>
+           <div className="  absolute top-0 right-0 z-10 h-auto w-auto p-2 lg:p-4 m-2 lg:m-4 rounded-xl bg-gray-200">
+             <span className="text-sm md:text-2xl lg:text-5xl  font-serif"> No: 2</span>
            </div>
           <Image
             src="/FINAL-01.png"
