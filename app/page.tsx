@@ -7,6 +7,7 @@ import IllustrationSection from './Component/IllustrationSection'
 import GraphicDesignSection from './Component/GraphicDesignSection'
 import FeaturedProject from './Component/FeaturedProject'
 import { useState } from "react";
+import { AutoVideo } from "./Component/AutoVideo";
 
 export default function Home() {
   const [bg,setBg]= useState('bg-red')
@@ -19,20 +20,11 @@ export default function Home() {
         </div>
       </div>
       <main className="w-full bg-white">
-  <section className="m-0 p-0 overflow-hidden">
-    <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="metadata"
-      className="block w-full h-auto scale-[1.01]"
-    >
-      <source src="/333333.mp4" type="video/mp4" />
-    </video>
-  </section>
+      <AutoVideo src="/333333.mp4" />
+<AutoVideo src="/secondforafter.mp4" />
+ <AutoVideo src="/3rdpage2_3.mp4" />
 
-  <section className="m-0 p-0 overflow-hidden -mt-px">
+  {/* <section className="m-0 p-0 overflow-hidden -mt-px">
     <video
       autoPlay
       loop
@@ -55,7 +47,7 @@ export default function Home() {
           >
             <source src="/3rdpage2_3.mp4" type="video/mp4" />
           </video>
-        </section>
+        </section>*/}
 
         {/* Hero Image */}
         <section>
