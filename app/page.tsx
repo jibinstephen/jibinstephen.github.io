@@ -1,30 +1,84 @@
 'use client'
-import Image from "next/image";
+import LazyImage from "./Component/LazyImage";
 import Link from "next/link";
 import { Navbar } from './Component/Navbar'
 import Contact from './Component/Contact'
 import IllustrationSection from './Component/IllustrationSection'
 import GraphicDesignSection from './Component/GraphicDesignSection'
 import FeaturedProject from './Component/FeaturedProject'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AutoVideo } from "./Component/AutoVideo";
+import slideImg1 from "./assets/new/Slide 16_9 - 712.png";
+import slideImg2 from "./assets/new/Slide 16_9 - 713.png";
+import slideImg3 from "./assets/new/Slide 16_9 - 714.png";
+import slideImg4 from "./assets/new/Slide 16_9 - 715.png";
+import slideImg5 from "./assets/new/Slide 16_9 - 718.png";
+import slideImg6 from "./assets/new/Slide 16_9 - 716.png";
+import slideImg7 from "./assets/new/Slide 16_9 - 719.png";
+import slideImg8 from "./assets/new/Slide 16_9 - 720.png";
+import slideImg9 from "./assets/new/Slide 16_9 - 721.png";
+import slideImg10 from "./assets/new/Slide 16_9 - 723.png";
+import slideImg11 from "./assets/new/Slide 16_9 - 724.png";
+import slideImg12 from "./assets/new/Slide 16_9 - 725.png";
+import slideImg13 from "./assets/new/Slide 16_9 - 726.png";
+import slideImg14 from "./assets/new/Slide 16_9 - 722.png";
+import slideImg15 from "./assets/new/Slide 16_9 - 717.png";
+import slideImg16 from "./assets/new/Slide 16_9 - 728.png";
+import slideImg17 from "./assets/new/8825927.png";
+import slideImg18 from "./assets/new/8825928.png";
+import slideImg19 from "./assets/new/8825946.png";
+import slideImg20 from "./assets/new/8825931.png";
+import slideImg21 from "./assets/new/Slide 16_9 - 729.png";
+import slideImg22 from "./assets/new/8825932.png";
+import slideImg23 from "./assets/new/8825933.png";
+import slideImg24 from "./assets/new/8825934.png";
+import slideImg25 from "./assets/new/Slide 16_9 - 730.png";
+import slideImg26 from "./assets/new/Slide 16_9 - 670.png";
+import slideImg27 from "./assets/new/8825935.png";
+import slideImg28 from "./assets/new/8825936.png";
+import slideImg29 from "./assets/new/8825937.png";
+import slideImg30 from "./assets/new/8825938.png";
+import slideImg31 from "./assets/new/8825939.png";
+import slideImg32 from "./assets/new/8825940.png";
+import slideImg33 from "./assets/new/8825941.png";
+import slideImg34 from "./assets/new/8825942.png";
+import slideImg35 from "./assets/new/8825945.png";
+import slideImg36 from "./assets/new/8825946.png";
+import slideImg37 from "./assets/new/8825943.png";
+import Image from "next/image";
+
+
 
 export default function Home() {
-  const [bg,setBg]= useState('bg-red')
+  const [bg, setBg] = useState('bg-red')
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowNavbar(window.scrollY > 80);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-     <div className="sticky top-0 z-50 bg-white/80 backdrop-blur ">
-        <div className=" ">
-          <Navbar />
-
-        </div>
+      <div
+        className={`sticky top-0 z-50 bg-white/80 backdrop-blur transition-all duration-300 ${showNavbar
+          ? "translate-y-0 opacity-100 "
+          : "-translate-y-full opacity-0 pointer-events-none  hidden"
+          }`}
+      >
+        <Navbar />
       </div>
-      <main className="w-full bg-white">
-      <AutoVideo src="/333333.mp4" />
-<AutoVideo src="/secondforafter.mp4" />
- <AutoVideo src="/3rdpage2_3.mp4" />
 
-  {/* <section className="m-0 p-0 overflow-hidden -mt-px">
+      <main className="w-full bg-white">
+        {/* <AutoVideo src="/333333.mp4" />
+<AutoVideo src="/secondforafter.mp4" />
+ <AutoVideo src="/3rdpage2_3.mp4" /> */}
+
+        {/* <section className="m-0 p-0 overflow-hidden -mt-px">
     <video
       autoPlay
       loop
@@ -51,15 +105,61 @@ export default function Home() {
 
         {/* Hero Image */}
         <section>
-          <Image
-            src="/updatedone-02.png"
+          <LazyImage
+            src={slideImg1}
             alt="Anandavandi visual"
             width={1920}
             height={1080}
             className="w-fit"
           />
         </section>
-         <section>
+        <section>
+          <LazyImage
+            src={slideImg2}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg3}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg4}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg5}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg6}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+
+        <section>
           <Image
             src="/ANADHAVANDIFIRST.gif"
             alt="Anandavandi main banner"
@@ -71,11 +171,82 @@ export default function Home() {
         </section>
 
 
-
-
+///////
         <section>
-          <Image
-            src="/anandavandilast-01.png"
+          <LazyImage
+            src={slideImg7}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg8}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg9}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg10}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg11}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg12}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg13}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg14}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg15}
             alt="Anandavandi visual"
             width={1920}
             height={1080}
@@ -83,19 +254,230 @@ export default function Home() {
           />
         </section>
 
+        <section>
+          <LazyImage
+            src={slideImg16}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+
+        <section>
+          <LazyImage
+            src={slideImg17}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg18}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg19}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg20}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg21}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg22}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg23}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg24}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg25}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg26}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg27}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg28}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg29}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg30}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg31}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg32}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg33}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg34}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg35}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        {/* <section>
+          <Image
+            src={slideImg36}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section> */}
+        <section>
+          <LazyImage
+            src={slideImg37}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+
+
+        {/* <section>
+          <Image
+            src="/anandavandilast-01.png"
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section> */}
+
         {/* Education Image*/}
 
 
-        <div className="w-full aspect-video">
-      <iframe
-        className="w-full h-full"
-         src="https://www.youtube.com/embed/cDEpBoEdX7E"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      />
-    </div>
+        {/* <div className="w-full aspect-video">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/cDEpBoEdX7E"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
         <section>
           <Image
             src="/222-01.png"
@@ -104,11 +486,11 @@ export default function Home() {
             height={1080}
             className="w-full relative top-3 "
           />
-        </section>
+        </section> */}
 
         {/* Video Section */}
-        <section >
-        <Image
+        {/* <section >
+          <Image
             src="/Untitled-2-02.png"
             alt="Education showcase"
             width={1920}
@@ -117,10 +499,10 @@ export default function Home() {
           />
         </section>
         <section className=" relative">
-        <div className="  absolute top-0 right-0 z-10 h-auto w-auto p-2 lg:p-4 m-2 lg:m-4 rounded-xl bg-gray-200">
-             <span className="text-sm md:text-2xl lg:text-5xl  font-serif"> No: 1</span>
-           </div>
-        <Image
+          <div className="  absolute top-0 right-0 z-10 h-auto w-auto p-2 lg:p-4 m-2 lg:m-4 rounded-xl bg-gray-200">
+            <span className="text-sm md:text-2xl lg:text-5xl  font-serif"> No: 1</span>
+          </div>
+          <Image
             src="/Recovered01.png"
             alt="Education showcase"
             width={1920}
@@ -129,32 +511,32 @@ export default function Home() {
           />
         </section>
         <section className="m-0 p-0 overflow-hidden">
-    <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="metadata"
-      className="block w-full h-auto scale-[1.01]"
-    >
-      <source src="/6385IMG.MP4" type="video/mp4" />
-    </video>
-  </section>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            className="block w-full h-auto scale-[1.01]"
+          >
+            <source src="/6385IMG.MP4" type="video/mp4" />
+          </video>
+        </section>
         <section >
-        <Image
+          <Image
             src="/3RDPAGE-01.png"
             alt="Education showcase"
             width={1920}
             height={1080}
             className="w-full relative top-3 "
           />
-        </section>
+        </section> */}
 
         {/* Image Below Video */}
-        <section className=" relative">
-           <div className="  absolute top-0 right-0 z-10 h-auto w-auto p-2 lg:p-4 m-2 lg:m-4 rounded-xl bg-gray-200">
-             <span className="text-sm md:text-2xl lg:text-5xl  font-serif"> No: 2</span>
-           </div>
+        {/* <section className=" relative">
+          <div className="  absolute top-0 right-0 z-10 h-auto w-auto p-2 lg:p-4 m-2 lg:m-4 rounded-xl bg-gray-200">
+            <span className="text-sm md:text-2xl lg:text-5xl  font-serif"> No: 2</span>
+          </div>
           <Image
             src="/PG-01.png"
             alt="Anandavandi featured visual"
@@ -162,7 +544,7 @@ export default function Home() {
             height={1080}
             className="w-full relative"
           />
-        </section>
+        </section> */}
 
         {/* Featured Projects */}
         {/* <section className="flex  flex-col lg:flex-row  w-full gap-4  bg-white/80">
