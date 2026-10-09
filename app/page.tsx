@@ -1,5 +1,7 @@
 'use client'
 import LazyImage from "./Component/LazyImage";
+import ImageLoadGate, { ImageLoadState } from "./Component/ImageLoadGate";
+import LoadingScreen from "./Component/LoadingScreen";
 import Link from "next/link";
 import { Navbar } from './Component/Navbar'
 import Contact from './Component/Contact'
@@ -45,13 +47,35 @@ import slideImg34 from "./assets/new/8825942.png";
 import slideImg35 from "./assets/new/8825945.png";
 import slideImg36 from "./assets/new/8825946.png";
 import slideImg37 from "./assets/new/8825943.png";
-import Image from "next/image";
+import slideImg38 from "./assets/new/8825776.png";
+import slideImg39 from "./assets/new/8825777.png";
+import slideImg40 from "./assets/new/8825778.png";
+import slideImg41 from "./assets/new/8825779.png";
+import slideImg42 from "./assets/new/8825780.png";
+import slideImg43 from "./assets/new/8825781.png";
+import slideImg44 from "./assets/new/8825782.png";
+import slideImg45 from "./assets/new/8825783.png";
+import slideImg46 from "./assets/new/8825784.png";
+import slideImg47 from "./assets/new/8825785.png";
+import slideImg48 from "./assets/new/8825786.png";
+import slideImg49 from "./assets/new/8825787.png";
+import slideImg50 from "./assets/new/8825788.png";
+import slideImg51 from "./assets/new/8825789.png";
+import slideImg52 from "./assets/new/8825790.png";
+import slideImg53 from "./assets/new/8825791.png";
+import slideImg54 from "./assets/new/8825792.png";
+import slideImg55 from "./assets/new/8825793.png";
 
 
 
 export default function Home() {
   const [bg, setBg] = useState('bg-red')
   const [showNavbar, setShowNavbar] = useState(false);
+  const [imageLoad, setImageLoad] = useState<ImageLoadState>({
+    loaded: 0,
+    total: 0,
+    ready: false,
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,8 +86,40 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (imageLoad.ready) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const timeout = window.setTimeout(() => {
+      setImageLoad((current) => ({ ...current, ready: true }));
+    }, 60000);
+    return () => {
+      document.body.style.overflow = previous;
+      window.clearTimeout(timeout);
+    };
+  }, [imageLoad.ready]);
+
+  const handleImageLoad = (state: ImageLoadState) => {
+    setImageLoad((current) => {
+      if (current.ready) return current;
+      if (
+        current.loaded === state.loaded &&
+        current.total === state.total &&
+        current.ready === state.ready
+      ) {
+        return current;
+      }
+      return state;
+    });
+  };
+
+  const loadPercent = imageLoad.total
+    ? Math.round((imageLoad.loaded / imageLoad.total) * 100)
+    : 0;
+
   return (
     <>
+      <LoadingScreen progress={loadPercent} hidden={imageLoad.ready} />
       <div
         className={`sticky top-0 z-50 bg-white/80 backdrop-blur transition-all duration-300 ${showNavbar
           ? "translate-y-0 opacity-100 "
@@ -73,6 +129,7 @@ export default function Home() {
         <Navbar />
       </div>
 
+      <ImageLoadGate onChange={handleImageLoad}>
       <main className="w-full bg-white">
         {/* <AutoVideo src="/333333.mp4" />
 <AutoVideo src="/secondforafter.mp4" />
@@ -160,18 +217,15 @@ export default function Home() {
         </section>
 
         <section>
-          <Image
+          <LazyImage
             src="/ANADHAVANDIFIRST.gif"
             alt="Anandavandi main banner"
             width={1920}
             height={1080}
-            priority
             className=" w-fit"
           />
         </section>
 
-
-///////
         <section>
           <LazyImage
             src={slideImg7}
@@ -453,6 +507,168 @@ export default function Home() {
             className="w-fit"
           />
         </section>
+        <section>
+          <LazyImage
+            src={slideImg38}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg39}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg40}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg41}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg42}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg43}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg44}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg45}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg46}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg47}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg48}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg49}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg50}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg51}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg52}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg53}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg54}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
+        <section>
+          <LazyImage
+            src={slideImg55}
+            alt="Anandavandi visual"
+            width={1920}
+            height={1080}
+            className="w-fit"
+          />
+        </section>
 
 
         {/* <section>
@@ -581,6 +797,7 @@ export default function Home() {
         <Contact />
 
       </main >
+      </ImageLoadGate>
     </>
 
   );
