@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import { Behance, InstagramIcon, LinkedInIcon } from '../Hook/Svgicons';
 
@@ -15,8 +13,8 @@ const Contact = () => {
           src="/contact_illustration.png"
           alt="Get in touch"
           fill
+          sizes="100vw"
           className="object-cover opacity-10"
-          priority
         />
       </div>
 
@@ -29,6 +27,7 @@ const Contact = () => {
               src="/contact_illustration.png"
               alt="Get in touch"
               fill
+              sizes="448px"
               className="object-contain"
             />
           </div>
