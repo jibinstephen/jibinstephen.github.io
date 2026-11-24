@@ -1,11 +1,10 @@
 'use client'
 
 type LoadingScreenProps = {
-  progress: number;
   hidden: boolean;
 };
 
-export default function LoadingScreen({ progress, hidden }: LoadingScreenProps) {
+export default function LoadingScreen({ hidden }: LoadingScreenProps) {
   return (
     <div
       className={`fixed inset-0 z-[80] flex flex-col items-center justify-center overflow-hidden bg-[#ff0000] transition-opacity duration-500 ${hidden ? "pointer-events-none opacity-0" : "opacity-100"}`}
@@ -17,6 +16,10 @@ export default function LoadingScreen({ progress, hidden }: LoadingScreenProps) 
         @keyframes monk-float {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-10px); }
+        }
+        @keyframes loader-slide {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(250%); }
         }
       `}</style>
       <div
@@ -44,8 +47,8 @@ export default function LoadingScreen({ progress, hidden }: LoadingScreenProps) 
       />
       <div className="relative mt-2 h-[3px] w-40 overflow-hidden bg-black/20">
         <div
-          className="h-full bg-black transition-[width] duration-300"
-          style={{ width: `${progress}%` }}
+          className="h-full w-2/5 bg-black"
+          style={{ animation: "loader-slide 1.1s ease-in-out infinite" }}
         />
       </div>
     </div>
